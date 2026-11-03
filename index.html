@@ -748,6 +748,26 @@ footer::before{content:"";position:absolute;z-index:-1;left:50%;width:100vw;tran
 .tl article:hover::after{transform:translate(-50%,-50%) scale(1.15)}
 @media (max-width:680px){.tl::before{left:8px}.tl article::after{left:-30px}}
 @media (prefers-reduced-motion:reduce){.tl::before{transform:none;transition:none}.rv{transition:none}}
+
+/* v10: tighter spacing on phones */
+@media (max-width:680px){
+  .hero-in{padding-bottom:8px;gap:22px}
+  .portrait{margin-top:8px}
+  .rib{height:176px;margin-top:-6px}
+  .sec{padding-block:52px}
+  #about{padding-top:34px}
+  #skills,#journey,#faq,#contact{padding-block:48px}
+  .flow{margin-top:48px}
+  #work{padding-block:104px}
+}
+
+/* v11: no extra scroll space under the footer */
+footer::before{bottom:0!important}
+@media (max-width:680px){
+  footer{padding-block:20px 22px;gap:10px;font-size:.8rem}
+  footer .fl{gap:12px}
+  #contact{padding-bottom:36px}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
